@@ -1,0 +1,85 @@
+<body>
+    <div class="container mt-3">
+        <!-- Desktop Navbar -->
+        <div class="desktop-nav">
+            <div class="row align-items-center">
+                <!-- First Row: Logo, Search, Icons -->
+                <div class="col-md-4 text-center">
+                    <img id="logo-desktop" src="assets/images/logo.png" alt="Company Logo">
+                </div>
+                <div class="col-md-4">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="search-input-desktop" placeholder="Search by event...">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="row nav-icons justify-content-center">
+                        <div class="col-auto">
+                            <a href="#">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span>Cart</span>
+                            </a>
+                        </div>
+                        <div class="col-auto">
+                            <a href="#">
+                                <i class="fas fa-user"></i>
+                                <span>Login</span>
+                            </a>
+                        </div>
+                        <div class="col-auto">
+                            <a href="#">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Location</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Second Row: Buttons -->
+            <div class="row btn-row justify-content-center mt-3 buttons-row">
+                <button class="btn btn-birthday col-auto">Birthday</button>
+                <button class="btn btn-surprises col-auto">Surprises</button>
+                <button class="btn btn-festivals col-auto">Festivals</button>
+                <button class="btn btn-decorations col-auto">Anniversary</button>
+            </div>
+        </div>
+
+        <!-- Mobile Navbar -->
+        <div class="mobile-nav">
+            <div class="mobile-icons">
+                <img id="logo-mobile" src="assets/images/logo.png" alt="Company Logo">
+                <a href="#"><i class="fas fa-map-marker-alt"></i></a>
+                <a href="#"><i class="fas fa-shopping-cart"></i></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <div class="collapse" id="mobile-menu">
+                <!-- First Row: Login Icon -->
+                <div class="row justify-content-center mt-3">
+                    <a href="#" class="btn-login">
+                        <i class="fas fa-user"></i>
+                        <span>Login</span>
+                    </a>
+                </div>
+            
+                <!-- Second Row: Buttons -->
+                <div class="row btn-row justify-content-center mt-3">
+                    <button class="btn btn-primary col-9 col-md-3 mb-2">Birthday</button>
+                    <button class="btn btn-primary col-9 col-md-3 mb-2">Surprises</button>
+                    <button class="btn btn-primary col-9 col-md-3 mb-2">Festivals</button>
+                    <button class="btn btn-primary col-9 col-md-3 mb-2">Anniversary</button>
+                </div>
+            
+            </div>
+            
+            <div class="mobile-search">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="search-input-mobile" placeholder="Search by event...">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
