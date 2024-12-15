@@ -1,36 +1,33 @@
-const observeDOM = (callback) => {
-    const observer = new MutationObserver((mutationsList) => {
-        for (const mutation of mutationsList) {
-            if (
-                document.getElementById('search-input-desktop') &&
-                document.getElementById('search-input-mobile')
-            ) {
-                observer.disconnect(); // Stop observing once the elements are found
-                callback();
-            }
-        }
-    });
+// Function to open the search dialog on desktop version
+function openSearchDialog() {
+    document.getElementById('searchDialog').style.display = 'block';
+}
 
-    observer.observe(document.body, { childList: true, subtree: true });
-};
+// Function to select an event from the dialog on desktop version
+function selectEvent(event) {
+    document.getElementById('searchBox').value = event;
+    document.getElementById('searchDialog').style.display = 'none';
+}
 
-observeDOM(() => {
-    const placeholders = [
-        "Search by Birthday party...",
-        "Search by Anniversary party...",
-        "Search by Festivals...",
-        "Search by Surprises...",
-        "Search by Decorations..."
-    ];
-
-    const desktopInput = document.getElementById('search-input-desktop');
-    const mobileInput = document.getElementById('search-input-mobile');
-    let currentIndex = 0;
-
-    setInterval(() => {
-        const newPlaceholder = ` ${placeholders[currentIndex]}`;
-        if (desktopInput) desktopInput.placeholder = newPlaceholder;
-        if (mobileInput) mobileInput.placeholder = newPlaceholder;
-        currentIndex = (currentIndex + 1) % placeholders.length;
-    }, 1200);
+// Close the search dialog if clicking outside the box (for desktop)
+document.addEventListener('click', function(event) {
+    if (!document.getElementById('searchBox').contains(event.target) && !document.getElementById('searchDialog').contains(event.target)) {
+        document.getElementById('searchDialog').style.display = 'none';
+    }
 });
+
+// Mobile version: Open search dialog
+function openSearchDialogMobile() {
+    document.getElementById('mobileSearchDialog').style.display = 'block';
+}
+
+// Mobile version: Close search dialog
+function closeSearchDialogMobile() {
+    document.getElementById('mobileSearchDialog').style.display = 'none';
+}
+
+// Function to select an event on mobile version
+function selectEventMobile(event) {
+    document.getElementById('mobileSearchBox').value = event;
+    document.getElementById('mobileSearchDialog').style.display = 'none';
+}

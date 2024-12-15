@@ -1,210 +1,201 @@
- /* Desktop-Specific Styles */
- .search-box {
-    display: flex;
-    align-items: center;
-    border: 2.5px solid #555;
-    border-radius: 5px;
-    padding: 5px 15px;
-    max-width: 450px;
-    margin: 0 auto;
-    background-color:white;
-    height: 40px;
-    width: 900px;
-    color: blue;
+/* Desktop Search Dialog */
+.desktop-container{
     position: relative;
-    right: 30px;
+    bottom: 20px;
 }
-#logo-desktop{
-    height: 65px;
+.desktop-logo{
     position: relative;
-    right: 90px;
-    bottom: 12px;
-    /* width: 200px; */
+    height: 60px;
+    /* width: 0px; */
+    top: 10px;
+    left: 20px;
+}
+.location-logo i{
+    position: relative;
+    font-size: 25px;
+    /* bottom: px; */
+    top: 22px;
+}
+.hyd{
+    position: relative;
+    /* bottom: 18px; */
+    left: 5px;
+    top: 18px;
+}
+.search-box-container{
+    position: relative;
+    right: 140px;
+    top: 34px;
 }
 
-.search-box i {
-    margin-right: 10px;
-    color: #888;
+.search-box-container i{
+    position: relative;
+    bottom: 30px;
+    left: 23.5em;
+}
+.search-dialog {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    display: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.search-box input {
-    border: none;
-    outline: none;
+.search-dialog button {
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+/* Mobile Search Dialog */
+.mobile-search-dialog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+.mobile-search-dialog input {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.mobile-search-dialog button {
+    width: 100%;
+    margin-bottom: 5px;
+}
+.mobile-search-dialog i{
+    position: relative;
+    font-size: 22px;
+    bottom: 40px;
+    left: 14.5em;
+}
+
+/* Floating Footer on Mobile */
+/* Base fixed bottom footer styles */
+.fixed-bottom {
+    background-color: #f8f9fa;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
     width: 100%;
 }
 
-.animated-text {
-    display: inline-block;
-    color: #d31d9c;
-    font-weight: bold;
-}
-.nav-icons{
-    position: relative;
-    left: 70px;
-    /* padding: 100px; */
-}
-
-.nav-icons a {
+.fixed-bottom .row {
     display: flex;
+    justify-content: space-evenly;
     align-items: center;
-    gap: 5px;
-    color: #555;
-    text-decoration: none;
-    transition: color 0.3s ease;
-    /* position: relative; */
-    
-    padding: 8px;
-    /* right: 30px; */
 }
 
-.nav-icons i{
+/* Flexbox for icons and labels in columns */
+.fixed-bottom .col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.fixed-bottom i {
     font-size: 20px;
 }
 
-.nav-icons a:hover {
-    color: #d31d9c;
+.fixed-bottom span {
+    font-size: 12px;
+    margin-top: 10px; /* Adjust spacing between icon and label */
 }
 
-.nav-icons span {
-    font-size: 16px;
-}
-
-.buttons-row{
-    position: relative;
-    left:17px;
-}
-
-.btn-row .btn {
-    margin: 5px;
-    color: #e7e6e6;
-    font-size: 14px;
-}
-
-.btn-row .btn:hover{
-    background-color: black;
-
-}
-
-.btn-birthday {
-    background-color: #f39c12;
-}
-
-.btn-surprises {
-    background-color: #8e44ad;
-}
-
-.btn-festivals {
-    background-color: #2980b9;
-}
-
-.btn-decorations {
-    background-color: #27ae60;
-}
-
-/* Mobile-Specific Styles */
+/* Media query for mobile responsiveness */
 @media (max-width: 768px) {
-    /* Logo Adjustments */
-    #logo-mobile {
-        height: 50px;
-        width: 130px;
-        position: relative;
-        bottom: 15px;
-    }
-
-    /* Hide Desktop Nav, Show Mobile Nav */
-    .desktop-nav {
-        display: none;
-    }
-
-    .mobile-nav {
-        display: block;
-    }
-
-    /* Navbar Toggler Button */
-    .navbar-toggler {
-        border: none;
-        font-size: 17px;
-    }
-
-    /* Mobile Navbar Icons */
-    .mobile-icons {
+    .fixed-bottom .row {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: white;
-        color: black;
+        justify-content: space-between; /* Ensure space between items */
     }
 
-    .mobile-icons i {
-        font-size: 22px;
-        color: rgb(249, 85, 112);
-    }
-
-    /* Collapsible Menu */
-    .mobile-menu {
+    .fixed-bottom .col {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 0 10px;
     }
 
-    /* Login Icon */
-    .btn-login {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 8px;
-        font-size: 16px;
-        color: black;
-        text-decoration: none;
+    .fixed-bottom i {
+        font-size: 20px; /* You can adjust this as per need */
     }
 
-    .btn-login i {
-        font-size: 22px;
-        color: rgb(249, 85, 112);
+    .fixed-bottom span {
+        font-size: 12px; /* Keep the label text smaller on mobile */
+        margin-top: 1px; /* Adjust the gap between the icon and label */
     }
-
-    /* Buttons Row */
-    .btn-row button {
-        font-size: 16px;
-        padding: 10px 20px;
-        border-radius: 5px;
-        text-align: center;
-    }
-
-    /* Equal Padding and Alignment for Buttons */
-    .btn-row {
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        /* justify-content: center; */
-        position: relative;
-        left: 11px;
-        
-    }
-    .mobile-search{
-        display: flex;
-        width: 250px;
-        position: relative;
-        left: 40px;
-        top: 10px;
-        /* background-color: #27ae60; */
-    }
-
-   
-
-   
-
-    
 }
 
 
-@media (min-width: 769px) {
-    .desktop-nav {
-        display: block;
+/* Icon Container */
+.icon-container {
+    text-align: center;
+    position: relative;
+    top: 24px;
+    padding: 25px;
+    right: 100px;
+}
+
+.icon-container i {
+    font-size: 24px;
+    display: block;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.justify-content-evenly {
+    justify-content: space-evenly;
+}
+
+
+/* Mobile and Desktop Adjustments */
+@media (max-width: 768px) {
+
+    .mobile-logo{
+        /* display: flex; */
+        position: relative;
+        right:5px;
+        height: 57px;
+    }
+    .mobile-location-logo{
+        position: relative;
+        font-size: 18px;
+        top: 12px;
+        left: 15px;
+    }
+    .mobile-hyd{
+        position: relative;
+        font-size: 15px;
+        font-weight: 500;
+        top: 12px;
+        left: 13px;
+    }
+    .mobile-search-logo{
+        position: relative;
+        font-size: 18px;
+        top: 12px;
+        left: 40px;
     }
 
-    .mobile-nav {
+    .d-lg-none {
+        display: block;
+    }
+    .d-none {
         display: none;
     }
 }

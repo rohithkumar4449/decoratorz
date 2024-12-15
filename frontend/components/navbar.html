@@ -1,85 +1,104 @@
+
 <body>
-    <div class="container mt-3">
-        <!-- Desktop Navbar -->
-        <div class="desktop-nav">
-            <div class="row align-items-center">
-                <!-- First Row: Logo, Search, Icons -->
-                <div class="col-md-4 text-center">
-                    <img id="logo-desktop" src="assets/images/logo.png" alt="Company Logo">
+    <!-- Desktop Version -->
+    <div class="container-fluid d-none d-lg-block desktop-container">
+        <div class="row align-items-center">
+            <!-- Column 1: Company Logo -->
+            <div class="col-md-3">
+                <img src="assets/images/logo.png" alt="Company Logo" class="img-fluid desktop-logo">
+            </div>
+
+            <!-- Column 2: Location and City -->
+            <div class="col-md-3 location-logo" >
+                <i class="fas fa-map-marker-alt"></i> <span class="hyd">Hyderabad</span>
+            </div>
+
+            <!-- Column 3: Search Box -->
+            <div class="col-md-4 position-relative search-box-container">
+                <input type="text" id="searchBox" class="form-control" placeholder="Search By Event.." onclick="openSearchDialog()">
+                <i class="fas fa-search search-icon" ></i>
+
+                <!-- Search Dialog -->
+                <div id="searchDialog" class="search-dialog">
+                    <button class="btn btn-primary" onclick="selectEvent('Birthdays')">Birthdays</button>
+                    <button class="btn btn-success" onclick="selectEvent('Festivals')">Festivals</button>
+                    <button class="btn btn-warning" onclick="selectEvent('Anniversary')">Anniversary</button>
+                    <button class="btn btn-danger" onclick="selectEvent('Surprise Party')">Surprise Party</button>
                 </div>
-                <div class="col-md-4">
-                    <div class="search-box">
-                        <i class="fas fa-search"></i>
-                        <input type="text" id="search-input-desktop" placeholder="Search by event...">
+            </div>
+
+            <!-- Column 4: Icons with Names -->
+            <div class="col-md-2">
+                <div class="d-flex flex-row justify-content-evenly">
+                    <div class="icon-container">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>Cart</span>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="row nav-icons justify-content-center">
-                        <div class="col-auto">
-                            <a href="#">
-                                <i class="fas fa-shopping-cart"></i>
-                                <span>Cart</span>
-                            </a>
-                        </div>
-                        <div class="col-auto">
-                            <a href="#">
-                                <i class="fas fa-user"></i>
-                                <span>Login</span>
-                            </a>
-                        </div>
-                        <div class="col-auto">
-                            <a href="#">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <span>Location</span>
-                            </a>
-                        </div>
+                    <div class="icon-container">
+                        <i class="fa-solid fa-headset"></i>
+                        <span>Contact</span>
+                    </div>
+                    <div class="icon-container">
+                        <i class="fas fa-user"></i>
+                        <span>Login</span>
                     </div>
                 </div>
             </div>
-            <!-- Second Row: Buttons -->
-            <div class="row btn-row justify-content-center mt-3 buttons-row">
-                <button class="btn btn-birthday col-auto">Birthday</button>
-                <button class="btn btn-surprises col-auto">Surprises</button>
-                <button class="btn btn-festivals col-auto">Festivals</button>
-                <button class="btn btn-decorations col-auto">Anniversary</button>
+                    </div>
+    </div>
+
+    <!-- Mobile Version -->
+    <div class="container-fluid d-lg-none mobile-container">
+        <div class="row align-items-center">
+            <!-- Column 1: Company Logo -->
+            <div class="col-6">
+                <img src="assets/images/logo.png" alt="Company Logo" class="img-fluid mobile-logo">
+            </div>
+
+            <!-- Column 2: Location & Search Icon -->
+            <div class="col-6 text-right">
+                <i class="fas fa-map-marker-alt mobile-location-logo"></i> <span class="mobile-hyd">Hyderabad</span>
+                <i class="fas fa-search mobile-search-logo" onclick="openSearchDialogMobile()"></i>
             </div>
         </div>
 
-        <!-- Mobile Navbar -->
-        <div class="mobile-nav">
-            <div class="mobile-icons">
-                <img id="logo-mobile" src="assets/images/logo.png" alt="Company Logo">
-                <a href="#"><i class="fas fa-map-marker-alt"></i></a>
-                <a href="#"><i class="fas fa-shopping-cart"></i></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mobile-menu">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </div>
-            <div class="collapse" id="mobile-menu">
-                <!-- First Row: Login Icon -->
-                <div class="row justify-content-center mt-3">
-                    <a href="#" class="btn-login">
-                        <i class="fas fa-user"></i>
-                        <span>Login</span>
-                    </a>
+        <!-- Mobile Search Dialog -->
+        <div id="mobileSearchDialog" class="mobile-search-dialog">
+            <input type="text" id="mobileSearchBox" class="form-control" placeholder="Search By Event..">
+            <i class="fas fa-times" onclick="closeSearchDialogMobile()"></i>
+            <button class="btn btn-primary" onclick="selectEventMobile('Birthdays')">Birthdays</button>
+            <button class="btn btn-success" onclick="selectEventMobile('Festivals')">Festivals</button>
+            <button class="btn btn-warning" onclick="selectEventMobile('Anniversary')">Anniversary</button>
+            <button class="btn btn-danger" onclick="selectEventMobile('Surprise Party')">Surprise Party</button>
+        </div>
+
+        <!-- Fixed Footer Row for Mobile -->
+        <div class="fixed-bottom">
+            <div class="row justify-content-around">
+                <div class="col text-center">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
                 </div>
-            
-                <!-- Second Row: Buttons -->
-                <div class="row btn-row justify-content-center mt-3">
-                    <button class="btn btn-primary col-9 col-md-3 mb-2">Birthday</button>
-                    <button class="btn btn-primary col-9 col-md-3 mb-2">Surprises</button>
-                    <button class="btn btn-primary col-9 col-md-3 mb-2">Festivals</button>
-                    <button class="btn btn-primary col-9 col-md-3 mb-2">Anniversary</button>
+                <div class="col text-center">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span>Cart</span>
                 </div>
-            
-            </div>
-            
-            <div class="mobile-search">
-                <div class="search-box">
-                    <i class="fas fa-search"></i>
-                    <input type="text" id="search-input-mobile" placeholder="Search by event...">
+                <div class="col text-center">
+                    <i class="fas fa-user"></i>
+                    <span>Login</span>
+                </div>
+                <div class="col text-center">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>Call</span>
+                </div>
+                <div class="col text-center">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>WhatsApp</span>
                 </div>
             </div>
         </div>
+        
+        
     </div>
-</body>
+
+ </body>
