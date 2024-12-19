@@ -1,28 +1,17 @@
-@media (min-width: 768px) {
-    .carousel{
-        position: relative;
-        bottom: 17px;
-    }
-}
 .carousel-item {
-    height: 475px;
+    height: 250px;  /* Set height for mobile view */
 }
 .carousel-item video {
     width: 100%;
     height: 100%;
     object-fit: cover; /* Ensures the video covers the area without distortion */
 }
-
-@media (max-width: 768px) {
-
-    #videoCarousel {
-      /* width: 100%;  */
-      height: 200px; /* Fixed height for mobile */
+@media (min-width: 768px) {
+    .carousel{
+        position: relative;
+        bottom: 17px;
     }
-  
-    .carousel-item video {
-        /* width: 100%;  */
-        height: 200px; /* Fixed height for mobile */
-      object-fit: contain; /* Ensure video is centered and does not crop */
+    .carousel-item {
+        height: 475px;  /* Set height for desktop view */
     }
-  }
+}
