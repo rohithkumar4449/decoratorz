@@ -1,7 +1,7 @@
 /* Desktop Search Dialog */
 .desktop-container{
     position: relative;
-    bottom: 20px;
+    bottom: 26px;
 }
 .desktop-logo{
     position: relative;
@@ -12,7 +12,7 @@
 }
 .location-logo i{
     position: relative;
-    font-size: 25px;
+    font-size: 22px;
     /* bottom: px; */
     top: 22px;
 }
@@ -20,7 +20,8 @@
     position: relative;
     /* bottom: 18px; */
     left: 5px;
-    top: 18px;
+    top: 20px;
+    /* font-size: 20px; */
 }
 .search-box-container{
     position: relative;
@@ -31,7 +32,7 @@
 .search-box-container i{
     position: relative;
     bottom: 30px;
-    left: 23.5em;
+    left: 23.1em;
 }
 .search-dialog {
     position: absolute;
@@ -147,7 +148,7 @@
 }
 
 .icon-container i {
-    font-size: 24px;
+    font-size: 19px;
     display: block;
 }
 
