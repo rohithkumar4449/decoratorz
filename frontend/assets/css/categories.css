@@ -34,8 +34,17 @@
     border-radius: 8px;
     margin-bottom: 10px;
     max-height: 150px;
+    /* height: 100%; */
     object-fit: cover;
     width: 100%;
+}
+.surprise-img{
+    display: flex;
+    height: 200px;
+}
+.birthday-img{
+    display: flex;
+    height: 200px;
 }
 
 .category-title {
@@ -43,7 +52,16 @@
     font-weight: bold;
     color: #333333;
 }
+.package-image img{
+    bottom: 24px;
+    position: relative;
+    /* height: 10%; */
+    /* width: 1268px; */
+    /* right: 50px; */
+    height: 420px;
+    width: 100%;
 
+}
 /* Mobile Adjustments */
 @media (max-width: 767px) {
     .categories-section .category-box {
@@ -51,5 +69,24 @@
     }
     .category-title {
         font-size: 1rem;
+    }
+    .surprise-img{
+        display: flex;
+        height: 100px;
+    }
+    .birthday-img{
+        display: flex;
+        height: 90px;
+
+    }
+    .package-image img{
+        bottom: 54px;
+        position: relative;
+        /* height: 10%; */
+        /* width: 1268px; */
+        /* right: 50px; */
+        height: 250px;
+        width: 100%;
+    
     }
 }
