@@ -1,28 +1,33 @@
 @media (max-width: 768px) {
-
-.carousel{
-    position: relative;
-    top: 12px;
-}
-}
-.carousel-item {
-    height: 400px; /* Set height for mobile view */
-}
-
-.carousel-item video {
-    width: auto; /* Ensure the video spans the container width */
-    height: 100%; /* Ensure the video spans the container height */
-    object-fit: contain; /* Fit the video inside the container without cropping or zooming */
-    object-position: center; /* Center the video inside the container */
+    .carousel {
+        position: relative;
+        top: 12px;
+        width: 100%; /* Ensure the carousel spans the full width */
+    }
+    .carousel-item {
+        height: 400px; /* Set height for mobile view */
+    }
+    .carousel-item video {
+        width: 100vw; /* Ensure the video spans the full viewport width */
+        height: 100%; /* Ensure the video spans the container height */
+        object-fit: cover; /* Fill the entire container */
+        object-position: center; /* Center the video */
+    }
 }
 
 @media (min-width: 768px) {
     .carousel {
         position: relative;
         bottom: 17px; /* Adjust positioning if needed */
+        width: 100%; /* Ensure the carousel spans the full width */
     }
     .carousel-item {
-        height: 475px; /* Set height for desktop view */
+        height: 475px; /* Set fixed height for desktop view */
+    }
+    .carousel-item video {
+        width: 100vw; /* Ensure the video spans the full viewport width */
+        height: 475px; /* Set fixed height */
+        object-fit: cover; /* Fill the entire container */
+        object-position: center; /* Center the video */
     }
 }
-
