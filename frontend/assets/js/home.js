@@ -4,3 +4,4 @@
      interval: 4000,
      pause: false // Ensures carousel continues sliding even on hover
  });
+ 
