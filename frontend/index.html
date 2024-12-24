@@ -30,6 +30,8 @@
     <link rel="stylesheet" href="assets/css/home.css">
     <link rel="stylesheet" href="assets/css/categories.css">
     <link rel="stylesheet" href="assets/css/gallery.css">
+    <link rel="stylesheet" href="assets/css/testimonials.css">
+
 
 
 
@@ -40,6 +42,7 @@
     <div id="home"></div>
     <div id="categories"></div>
     <div id="gallery"></div>
+    <div id="testimonials"></div>
 
 
 
@@ -83,6 +86,11 @@
         loadComponent('gallery', 'components/gallery.html', () => {
             const script = document.createElement('script');
             script.src = "assets/js/gallery.js";
+            document.body.appendChild(script);
+        });
+        loadComponent('testimonials', 'components/testimonials.html', () => {
+            const script = document.createElement('script');
+            script.src = "assets/js/testimonials.js";
             document.body.appendChild(script);
         });
     </script>

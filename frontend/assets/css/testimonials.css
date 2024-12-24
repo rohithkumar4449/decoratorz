@@ -1,0 +1,93 @@
+body {
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+.cv{
+    /* background-color: aqua; */
+    position: relative;
+    /* height: 2px; */
+    width: 100%;
+}
+
+.testimonials-container {
+    overflow: hidden;
+    width: 100%;
+    height: 160px; /* Fixed height for the main container */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Wrapper for scrolling effect */
+.testimonials-wrapper {
+    display: flex;
+    animation: scroll-desktop 30s linear infinite;
+}
+
+/* Individual cards */
+.testimonial-card {
+    flex: 0 0 auto;
+    width: 300px; /* Fixed card width for desktop */
+    height: 140px; /* Card height for desktop */
+    padding: 10px; /* Equal padding around cards */
+    box-sizing: border-box;
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    height: 100%; /* Full height of the card container */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.card-title {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.card-text {
+    font-size: 0.875rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    max-height: 100px; /* Ensure no overflow inside smaller cards */
+}
+
+/* Animation for desktop scrolling */
+@keyframes scroll-desktop {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .cv{
+        position: relative;
+        top: 15px;
+    }
+    .testimonials-container {
+        height: 230px; /* Fixed height for mobile */
+    }
+
+    .testimonials-wrapper {
+        animation: scroll-mobile 20s linear infinite; /* Faster scroll for mobile */
+    }
+
+    .testimonial-card {
+        width: 190px; /* Fixed card width for mobile */
+        height: 190px; /* Fixed card height for mobile */
+    }
+}
+
+/* Animation for mobile scrolling */
+@keyframes scroll-mobile {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
