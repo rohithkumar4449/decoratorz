@@ -29,6 +29,8 @@
     <link rel="stylesheet" href="assets/css/navbar.css">
     <link rel="stylesheet" href="assets/css/home.css">
     <link rel="stylesheet" href="assets/css/categories.css">
+    <link rel="stylesheet" href="assets/css/gallery.css">
+
 
 
 </head>
@@ -37,6 +39,8 @@
     <div id="navbar"></div>
     <div id="home"></div>
     <div id="categories"></div>
+    <div id="gallery"></div>
+
 
 
     <!-- Dialogs for Search -->
@@ -74,6 +78,11 @@
         loadComponent('categories', 'components/categories.html', () => {
             const script = document.createElement('script');
             script.src = "assets/js/categories.js";
+            document.body.appendChild(script);
+        });
+        loadComponent('gallery', 'components/gallery.html', () => {
+            const script = document.createElement('script');
+            script.src = "assets/js/gallery.js";
             document.body.appendChild(script);
         });
     </script>

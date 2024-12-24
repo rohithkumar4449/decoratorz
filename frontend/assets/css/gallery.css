@@ -1,0 +1,86 @@
+      
+      .container-fluid{
+        position: relative;
+        bottom: 24px;
+      }
+      .vs-button{
+        position: relative;
+        z-index: 999;
+        background-color: black;
+        color: white;
+        border-radius: 20px;
+        border: none;
+        bottom: 150px;
+        left: 250px;
+        height: 40px;
+        width: 100px;
+        font-size: 15px;
+              }
+              .vs-button:hover{
+                background-color: white;
+                color: black;
+              }
+      /* Left Column */
+        .left-column {
+            height: 420px;
+            padding: 0; /* Remove padding */
+        }
+
+        /* Right Column */
+        .right-column {
+            height: 420px;
+            padding: 0; /* Remove padding */
+        }
+
+        /* Right Column Rows */
+        .right-column .row {
+            margin: 0; /* Remove margin */
+        }
+
+        /* Images in Right Column */
+        .right-column img {
+            width: 100%;
+            height: calc(420px / 2); /* Set height to fit the right column in desktop */
+            object-fit: cover; /* Maintain aspect ratio and cover the area */
+        }
+
+        /* Image in Left Column */
+        .left-column img {
+            width: 100%;
+            height: 100%; /* Ensure image fills the column height */
+            object-fit: cover; /* Maintain aspect ratio and cover the area */
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            .vs-button{
+                position: relative;
+                /* top: 0px; */
+                bottom: 80px;
+                z-index: 89;
+                
+            }
+            .container-fluid{
+                position: relative;
+                bottom: 34px;
+              }
+            .left-column {
+                height: 230px;
+                padding: 0; /* Remove padding for mobile */
+            }
+
+            .right-column {
+                height: 260px; /* Adjust height for mobile */
+                padding: 0; /* Remove padding */
+            }
+
+            .right-column .row {
+                height: calc(260px / 2); /* Ensure rows are of equal height */
+                margin: 0; /* Ensure no space between rows */
+            }
+
+            .right-column img {
+                height: 100%; /* Fill the row height for mobile */
+                object-fit: cover; /* Maintain aspect ratio and cover the area */
+            }
+        }
