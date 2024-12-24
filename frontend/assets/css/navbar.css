@@ -174,24 +174,25 @@
         position: relative;
         right:5px;
         height: 57px;
+        top: 25px;
     }
     .mobile-location-logo{
         position: relative;
         font-size: 18px;
-        top: 12px;
+        top: 37px;
         left: 15px;
     }
     .mobile-hyd{
         position: relative;
         font-size: 15px;
         font-weight: 500;
-        top: 12px;
+        top: 35px;
         left: 13px;
     }
     .mobile-search-logo{
         position: relative;
         font-size: 18px;
-        top: 12px;
+        top: 37px;
         left: 40px;
     }
 

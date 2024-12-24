@@ -65,7 +65,7 @@
 /* Mobile Adjustments */
 @media (max-width: 767px) {
     .categories-section .category-box {
-        margin-bottom: 20px;
+        margin-bottom: 0px;
     }
     .category-title {
         font-size: 1rem;
@@ -80,7 +80,7 @@
 
     }
     .package-image img{
-        bottom: 54px;
+        bottom: 0px;
         position: relative;
         /* height: 10%; */
         /* width: 1268px; */
