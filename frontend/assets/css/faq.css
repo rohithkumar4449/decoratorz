@@ -1,0 +1,34 @@
+.faq-container{
+    position: relative;
+    top: 20px;
+}
+.faq-item {
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+}
+.faq-item:last-child {
+    border-bottom: none;
+}
+.faq-question {
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.faq-answer {
+    display: none;  /* Initially hide answers */
+    margin-top: 10px;
+    font-size: 1rem;
+}
+.faq-answer.show {
+    display: block;  /* Show answers when 'show' class is added */
+}
+.faq-icon {
+    font-size: 1.5rem;
+    transition: transform 0.3s;
+}
+.faq-icon.rotate {
+    transform: rotate(180deg);  /* Rotate icon when active */
+}
