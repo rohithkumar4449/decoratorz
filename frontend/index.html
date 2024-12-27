@@ -31,6 +31,8 @@
     <link rel="stylesheet" href="assets/css/categories.css">
     <link rel="stylesheet" href="assets/css/gallery.css">
     <link rel="stylesheet" href="assets/css/testimonials.css">
+    <link rel="stylesheet" href="assets/css/contact.css">
+
 
 
 
@@ -43,6 +45,7 @@
     <div id="categories"></div>
     <div id="gallery"></div>
     <div id="testimonials"></div>
+    <div id="contact"></div>
 
 
 
@@ -91,6 +94,11 @@
         loadComponent('testimonials', 'components/testimonials.html', () => {
             const script = document.createElement('script');
             script.src = "assets/js/testimonials.js";
+            document.body.appendChild(script);
+        });
+        loadComponent('contact', 'components/contact.html', () => {
+            const script = document.createElement('script');
+            script.src = "assets/js/contact.js";
             document.body.appendChild(script);
         });
     </script>
