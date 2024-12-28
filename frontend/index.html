@@ -33,6 +33,8 @@
     <link rel="stylesheet" href="assets/css/testimonials.css">
     <link rel="stylesheet" href="assets/css/contact.css">
     <link rel="stylesheet" href="assets/css/faq.css">
+    <link rel="stylesheet" href="assets/css/contactus.css">
+
 
 
 
@@ -49,6 +51,7 @@
     <div id="testimonials"></div>
     <div id="contact"></div>
     <div id="faq"></div>
+    <div id="contactus"></div>
 
 
 
@@ -112,6 +115,11 @@
         loadComponent('faq', 'components/faq.html', () => {
             const script = document.createElement('script');
             script.src = "assets/js/faq.js";
+            document.body.appendChild(script);
+        });
+        loadComponent('contactus', 'components/contactus.html', () => {
+            const script = document.createElement('script');
+            script.src = "assets/js/contactus.js";
             document.body.appendChild(script);
         });
     </script>

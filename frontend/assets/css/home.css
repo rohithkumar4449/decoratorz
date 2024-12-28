@@ -1,33 +1,46 @@
+/* Mobile View */
 @media (max-width: 768px) {
     .carousel {
         position: relative;
-        top: 12px;
-        width: 100%; /* Ensure the carousel spans the full width */
+        width: 100%; /* Full width */
     }
     .carousel-item {
-        height: 400px; /* Set height for mobile view */
+        height: 330px; /* Set height for mobile */
     }
-    .carousel-item video {
-        width: 100vw; /* Ensure the video spans the full viewport width */
-        height: 100%; /* Ensure the video spans the container height */
-        object-fit: cover; /* Fill the entire container */
-        object-position: center; /* Center the video */
+    .carousel-item img {
+        width: 100vw; /* Full viewport width */
+        height: 100%; /* Fill container height */
+        object-fit: cover; /* Keep aspect ratio */
+        object-position: center; /* Center image */
     }
 }
 
+/* Desktop View */
 @media (min-width: 768px) {
     .carousel {
         position: relative;
-        bottom: 17px; /* Adjust positioning if needed */
-        width: 100%; /* Ensure the carousel spans the full width */
+        width: 100%; /* Full width */
+        bottom: 22px;
     }
     .carousel-item {
-        height: 475px; /* Set fixed height for desktop view */
+        height: 480px; /* Fixed height */
     }
-    .carousel-item video {
-        width: 100vw; /* Ensure the video spans the full viewport width */
-        height: 475px; /* Set fixed height */
-        object-fit: cover; /* Fill the entire container */
-        object-position: center; /* Center the video */
+    .carousel-item img {
+        width: 100vw; /* Full viewport width */
+        height: 485px; /* Fixed height */
+        object-fit: cover; /* Keep aspect ratio */
+        object-position: center; /* Center image */
     }
+}
+
+/* Carousel Indicator Styling */
+.carousel-indicators button {
+    background-color: #555; /* Gray dash for inactive */
+    width: 12px;
+    height: 12px;
+    border-radius: 50%; /* Make it circular */
+}
+
+.carousel-indicators .active {
+    background-color: #007bff; /* Blue dash for active */
 }
