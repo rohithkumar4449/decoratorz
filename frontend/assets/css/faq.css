@@ -1,34 +1,24 @@
+@media (min-width: 768px) {
 .faq-container{
     position: relative;
-    top: 20px;
+    height: 270px;
 }
-.faq-item {
-    border-bottom: 1px solid #ddd;
-    padding: 15px 0;
 }
-.faq-item:last-child {
-    border-bottom: none;
-}
-.faq-question {
-    font-size: 1.2rem;
+.accordion-button {
     font-weight: bold;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    outline: none; /* Removes default focus outline */
+    box-shadow: none !important; /* Removes the blue shadow */
+    border: none !important; /* Removes border */
+    background-color: transparent; /* Optional: Set transparent background */
 }
-.faq-answer {
-    display: none;  /* Initially hide answers */
-    margin-top: 10px;
-    font-size: 1rem;
+
+.accordion-button:not(.collapsed) {
+    color: #000;
+    background-color: transparent;
+    box-shadow: none !important;
 }
-.faq-answer.show {
-    display: block;  /* Show answers when 'show' class is added */
-}
-.faq-icon {
-    font-size: 1.5rem;
-    transition: transform 0.3s;
-}
-.faq-icon.rotate {
-    transform: rotate(180deg);  /* Rotate icon when active */
+
+.accordion-button:focus {
+    box-shadow: none !important; /* Ensures no focus shadow appears */
+    outline: none !important;
 }
